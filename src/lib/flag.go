@@ -63,13 +63,13 @@ func (c *FlagConfig) IsAutoFormat() bool {
 	return c.Format == string(formatx.Auto)
 }
 
-// -mode 		必选	自定义基目录				字符串路径，文件夹或文件,"./"开头视为相对路径
-// -order 		必选	自定义基目录				字符串路径，文件夹或文件,"./"开头视为相对路径
-// -size 		必选	输出大小					[整数/宽x高],...
-// -in 			可选	来源地址					字符串路径，文件夹或文件,"./"开头视为相对路径
-// -out 		可选	输出地址					字符串路径，文件夹,"./"开头视为相对路径
-// -format 		可选	输出文件格式				图像格式[pngx,jpeg,gifx,jpg]
-// -ratio 		可选	压缩比					整数(0,100]
+// -mode 		可选	分割模式(默认1)				1：小图使用固定尺寸；	2：小图使用平均尺寸
+// -order 		可选	分割顺序(默认1)				1：左上角为起始点；	2：左下角为起始点
+// -size 		必选	尺寸设置						格式：mxn。当mode为1时，m、n代表小图尺寸；当mode为2时，m、n代表分割数量
+// -in 			必选	来源地址						字符串路径，文件夹或文件,"./"开头视为相对路径
+// -out 		必选	输出地址						字符串路径，文件夹,"./"开头视为相对路径，支持通配符（{n0},{N0},{n1},{N1},{x0},{X0},{x1},{X1},{y0},{Y0},{y1},{Y1}）
+// -format 		可选	输出文件格式(默认为in的格式)	图像格式[png,jpeg,jpg,jps]
+// -ratio 		可选	压缩比(默认85)				整数(0,100]格式为jpeg、jpg,jps时有效
 func ParseFlag() (cfg *FlagConfig, err error) {
 	mode := flag.Int("mode", int(SizeMode), "SplitMode!")
 	order := flag.Int("order", int(LeftUp), "SplitOrder!")
@@ -79,7 +79,7 @@ func ParseFlag() (cfg *FlagConfig, err error) {
 	out := flag.String("out", "", "Output Path! ")
 
 	format := flag.String("format", string(formatx.Auto), "Format FlagConfig!")
-	ratio := flag.Int("ratio", 75, "Ratio FlagConfig!")
+	ratio := flag.Int("ratio", 85, "Ratio FlagConfig!")
 
 	flag.Parse()
 
