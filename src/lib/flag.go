@@ -78,7 +78,7 @@ func ParseFlag() (cfg *FlagConfig, err error) {
 	in := flag.String("in", "", "Input Path! ")
 	out := flag.String("out", "", "Output Path! ")
 
-	format := flag.String("format", string(formatx.Auto), "Format FlagConfig!")
+	format := flag.String("format", string(formatx.Auto), "Formats FlagConfig!")
 	ratio := flag.Int("ratio", 85, "Ratio FlagConfig!")
 
 	flag.Parse()
@@ -121,7 +121,7 @@ func ParseFlag() (cfg *FlagConfig, err error) {
 	}
 	Format := *format
 	if "" != Format && !formatx.CheckFormatRegistered(Format) {
-		return nil, errors.New("Format Define Error: " + Format)
+		return nil, errors.New("Formats Define Error: " + Format)
 	}
 	Ratio := *ratio
 

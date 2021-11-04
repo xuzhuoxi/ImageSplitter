@@ -1,7 +1,9 @@
 # ImageSplitter
+
 ImageSplitter can be used to split image into multiple small images. You can specify the size or the number of divisions.
 
 ## Compatibility
+
 go 1.15.8
 
 ## Getting Started
@@ -89,6 +91,5 @@ xuzhuoxi
 <xuzhuoxi@gmail.com> or <mailxuzhuoxi@163.com>
 
 ## License
+
 ImageSplitter source code is available under the MIT [License](/LICENSE).
-
-
