@@ -17,5 +17,4 @@
 /.idea/
 /build/debian
 /build/release
-/test/
-/demo/mac/out/
+/demo/tar/
