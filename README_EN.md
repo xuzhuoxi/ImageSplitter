@@ -100,9 +100,9 @@ The tool supports command line execution only.
 
 - The example directory is located at [demo](/demo).
 
-- The Win64 platform can execute [DemoRun.bat.bat](/demo/DemoRun.bat.bat) for testing.
+- The Win64 platform can execute [DemoRunWin.bat.bat](/demo/DemoRunWin.bat.bat) for testing.
 
-- The Mac platform can execute [DemoRun.bat.sh](/demo/DemoRun.bat.sh) for testing.
+- The Mac platform can execute [DemoRunMac.bat.sh](/demo/DemoRunMac.bat.sh) for testing.
 
 - Modify the execution file path in the Mac test script for testing on the Linux platform.
 

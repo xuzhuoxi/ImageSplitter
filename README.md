@@ -98,9 +98,9 @@ go1.16
 
 - 例子目录位于[demo](/demo).
 
-- Win64平台可执行[DemoRun.bat.bat](/demo/DemoRun.bat.bat)进行测试。
+- Win64平台可执行[DemoRunWin.bat.bat](/demo/DemoRunWin.bat.bat)进行测试。
 
-- Mac平台可执行[DemoRun.bat.sh](/demo/DemoRun.bat.sh)进行测试。
+- Mac平台可执行[DemoRunMac.bat.sh](/demo/DemoRunMac.bat.sh)进行测试。
 
 - Linux平台修改Mac测试脚本中的执行文件路径进行测试。
 
