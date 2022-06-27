@@ -13,10 +13,10 @@ var (
 )
 
 var (
-	OrderLeftUp    = CmdFlag{core: []string{"lu", "leftup", "1"}, Desc: "左上[LeftUp]"}       // 左上角起始位
-	OrderLeftDown  = CmdFlag{core: []string{"ld", "leftdown", "2"}, Desc: "左下[LeftDown]"}   // 左下角起始位
-	OrderRightUp   = CmdFlag{core: []string{"ru", "rightup", "3"}, Desc: "右上[RightUp]"}     // 右上角起始位
-	OrderRightDown = CmdFlag{core: []string{"rd", "rightdown", "4"}, Desc: "右下[RightDown]"} // 右下角起始位
+	OrderLeftUp   = CmdFlag{core: []string{"lu", "leftup", "1"}, Desc: "左上[LeftUp]"}     // 左上角起始位
+	OrderLeftDown = CmdFlag{core: []string{"ld", "leftdown", "2"}, Desc: "左下[LeftDown]"} // 左下角起始位
+	//OrderRightUp   = CmdFlag{core: []string{"ru", "rightup", "3"}, Desc: "右上[RightUp]"}     // 右上角起始位
+	//OrderRightDown = CmdFlag{core: []string{"rd", "rightdown", "4"}, Desc: "右下[RightDown]"} // 右下角起始位
 )
 
 var (

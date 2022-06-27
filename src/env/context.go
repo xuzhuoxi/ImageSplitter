@@ -82,6 +82,10 @@ func (c *SplitContext) GetTrim() CmdFlag {
 	return EndTrimOn
 }
 
+func (c *SplitContext) TrimOn() bool {
+	return EndTrimOn.MatchCase(c.Trim)
+}
+
 func (c *SplitContext) SetImageSize(imageSize image.Point) {
 	c.ImageSize = imageSize
 	if c.checkFlag(ModeSize, c.Mode) {
