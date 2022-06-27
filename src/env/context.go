@@ -15,21 +15,22 @@ import (
 )
 
 type SplitContext struct {
-	EnvPath string // 环境路径
-	Mode    string // 分割模式
-	Order   string // 分割顺序，支持：LeftUp(0)、LeftDown(1)
-	Size    string // 分割参数，格式 "mxn","mXn","m*n"
-	Trim    string // 尾部裁剪
+	EnvPath string // 【**可选**】运行时环境路径，支持绝对路径与相对于当前执行目录的相对路径，空表示使用执行文件所在目录
+	Mode    string // 【**必要**】分割模式，支持：fixed(1)、avg(2)
+	Order   string // 【**必要**】分割顺序，支持：LeftUp(1)、LeftDown(2)
+	Size    string // 【**必要**】分割参数，格式 "mxn","mXn","m*n"
+	Trim    string // 【**必要**】尾部裁剪，支持：on、off
 
-	Format      string // 输出文件格式
-	FormatRatio int    // 输出文件质量
+	InImagePath  string // 【**必要**】来源图片路径,要求为图片格式的文件
+	OutImagePath string // 【**必要**】输出图片信息，要求使用通配符目录,
 
-	InImagePath  string // 来源图片路径,要求为图片格式的文件
-	OutImagePath string // 输出图片信息，要求使用通配符目录,
+	Format      string // 【**非必要**】强制指定图像文件格式, 如果不指定，将使用源图像的格式
+	FormatRatio int    // 【**非必要**】强制指定图像文件质量(如有必要)，如果不指定，使用默认值85
 
 	FlagSize             Size
 	ImageSize            image.Point
 	SliceSize, CountSize Size
+	FormatExt            string // 图像格式对应的扩展名
 }
 
 func (c *SplitContext) InitContext() error {
@@ -94,6 +95,7 @@ func (c *SplitContext) SetDefaultFormat(format string) {
 	if c.Format == "" {
 		c.Format = format
 	}
+	c.FormatExt = formatx.GetExtName(c.Format)
 }
 
 func (c *SplitContext) GetSrcPoint(xIndex int, yIndex int) (srcPoint image.Point) {

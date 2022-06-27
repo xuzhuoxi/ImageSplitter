@@ -8,8 +8,8 @@ import (
 )
 
 var (
-	ModeSize = CmdFlag{core: []string{"fixed", "1"}, Desc: "固定尺寸[Size]"} //固定分割，不足的补空
-	ModeAvg  = CmdFlag{core: []string{"avg", "2"}, Desc: "固定数量[Avg]"}    //平均分割，根据图片总大小进行水平与垂直的平均分割
+	ModeSize = CmdFlag{core: []string{"fixed", "1"}, Desc: "固定尺寸[Fixed]"} //固定分割，不足的补空
+	ModeAvg  = CmdFlag{core: []string{"avg", "2"}, Desc: "固定数量[Avg]"}     //平均分割，根据图片总大小进行水平与垂直的平均分割
 )
 
 var (
@@ -25,14 +25,16 @@ var (
 )
 
 var (
-	WildcardN0 = []string{"{n0}", "{N0}"}
-	WildcardN1 = []string{"{n1}", "{N1}"}
+	WildcardN0 = []string{"{n0}", "{N0}"} // 从0开始的分割顺序数。
+	WildcardN1 = []string{"{n1}", "{N1}"} // 从1开始的分割顺序数。
 
-	WildcardX0 = []string{"{x0}", "{X0}"}
-	WildcardX1 = []string{"{x1}", "{X1}"}
+	WildcardX0 = []string{"{x0}", "{X0}"} // 从0开始的水平方向分割顺序数。
+	WildcardX1 = []string{"{x1}", "{X1}"} // 从1开始的水平方向分割顺序数。
 
-	WildcardY0 = []string{"{y0}", "{Y0}"}
-	WildcardY1 = []string{"{y1}", "{Y1}"}
+	WildcardY0 = []string{"{y0}", "{Y0}"} // 从0开始的垂直方向分割顺序数。
+	WildcardY1 = []string{"{y1}", "{Y1}"} // 从1开始的垂直方向分割顺序数。
+
+	WildcardExt = []string{"{ext}"}
 )
 
 const (

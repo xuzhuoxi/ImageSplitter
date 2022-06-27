@@ -9,7 +9,8 @@ import (
 )
 
 // 替换路径中的通配符
-func GetFullPath(outPath string, xIndex int, yIndex int, xWidth int) string {
+func GetFullPath(outPath string, xIndex int, yIndex int, xWidth int, extName string) string {
+	//fmt.Println("GetFullPath:", outPath)
 	out := outPath
 	index0 := xWidth*yIndex + xIndex
 	index1 := index0 + 1
@@ -30,6 +31,8 @@ func GetFullPath(outPath string, xIndex int, yIndex int, xWidth int) string {
 
 	out = replaceWildcards(out, env.WildcardY0, strY0)
 	out = replaceWildcards(out, env.WildcardY1, strY1)
+
+	out = replaceWildcards(out, env.WildcardExt, extName)
 	return out
 }
 

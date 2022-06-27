@@ -27,7 +27,7 @@ func ParseSlice(ctx *env.SplitContext) (slices []*ImageSlice) {
 		for xIndex := 0; xIndex < countSize.Width; xIndex += 1 {
 			slice := &ImageSlice{Format: format, Options: options}
 			slice.SrcPoint = ctx.GetSrcPoint(xIndex, yIndex)
-			slice.FullPath = GetFullPath(ctx.OutImagePath, xIndex, yIndex, countSize.Width)
+			slice.FullPath = GetFullPath(ctx.OutImagePath, xIndex, yIndex, countSize.Width, ctx.FormatExt)
 
 			index := yIndex*countSize.Width + xIndex
 			slices[index] = slice
