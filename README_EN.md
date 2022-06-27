@@ -1,4 +1,4 @@
-# ImageResizer
+# ImageSplitter
 
 ImageSplitter is mainly used to split images into multiple small images.
 
