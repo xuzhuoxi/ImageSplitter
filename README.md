@@ -42,42 +42,42 @@ go1.16
 - -env 
   + 【**可选**】运行时环境路径，支持绝对路径与相对于当前执行目录的相对路径，空表示使用执行文件所在目录
   + 例子: 
-    `-env=D:/workspaces`
+    - `-env=D:/workspaces`
 - -mode
   + 【**必要**】分割模式，支持：fixed(1)、avg(2)
   + 例子: 
-    `-mode=fixed` 、 `-mode=1` 都表示使用fixed模式, 固定分割，不足的补空
-    `-mode=avg` 、 `-mode=2` 都表示使用avg模式, 平均分割，根据图片总大小进行水平与垂直的平均分割
+    - `-mode=fixed` 、 `-mode=1` 都表示使用fixed模式, 固定分割，不足的补空
+    - `-mode=avg` 、 `-mode=2` 都表示使用avg模式, 平均分割，根据图片总大小进行水平与垂直的平均分割
 - -order
   + 【**必要**】分割顺序，支持：LeftUp(1)、LeftDown(2)
   + 例子: 
-    `-order=LeftUp` 、 `-order=lu` 、 `-mode=1` 都表示以**左上**为起点。
-    `-order=LeftDown` 或 `-mode=ld` 或 `-mode=2` 都表示以**左下**为起点。
+    - `-order=LeftUp` 、 `-order=lu` 、 `-mode=1` 都表示以**左上**为起点。
+    - `-order=LeftDown` 或 `-mode=ld` 或 `-mode=2` 都表示以**左下**为起点。
 - -size
   + 【**必要**】分割参数，格式 "mxn","mXn","m*n"
   + 例子: 
-    `-modex=fixed -size=512*512` 表示按长为512宽为512的小图尺寸分割图像
-    `-modex=avg -size=10*10` 表示把图像分割为10乘以10张小图
+    - `-modex=fixed -size=512*512` 表示按长为512宽为512的小图尺寸分割图像
+    - `-modex=avg -size=10*10` 表示把图像分割为10乘以10张小图
 - -trim
   + 【**必要**】尾部裁剪，支持：on、off
   + 例子: 
-    `-trim=on` 、 `-trim=true`  、`-trim=1` 表示启用尾部裁剪
-    `-trim=off` 、 `-trim=false`  、`-trim=0` 表示关闭尾部裁剪
+    - `-trim=on` 、 `-trim=true`  、`-trim=1` 表示启用尾部裁剪
+    - `-trim=off` 、 `-trim=false`  、`-trim=0` 表示关闭尾部裁剪
 - -format
   + 【**非必要**】强制指定图像文件格式, 如果不指定，将使用源图像的格式
   + 例子: 
-    `-format=png` 表示输出小图文件使用png
+    - `-format=png` 表示输出小图文件使用png
 - -ratio
   + 【**非必要**】强制指定图像文件质量(如有必要)，如果不指定，使用默认值85
   + 例子: 
-    `-ratio=60` 表示输出小图文质量为85。
-    **注意**： 无须使用质量参数的图像格式将会忽略此处，如png格式 
+    - `-ratio=60` 表示输出小图文质量为85。
+    - **注意**： 无须使用质量参数的图像格式将会忽略此处，如png格式 
 - -in
   + 【**必要**】来源图片路径,要求为图片格式的文件
   + 可以使用绝对路径。
   + 可以使用相对路径，将配合-env参数值或当前执行文件目录使用。
   + 例子: 
-    `-env=D:/workspaces -in=res/In.png` 表示使用`D:/workspaces/res/In.png`这个图像。
+    - `-env=D:/workspaces -in=res/In.png` 表示使用`D:/workspaces/res/In.png`这个图像。
 - -out
   + 【**必要**】输出图片信息，要求使用**通配符**目录,
   + 可以使用绝对路径。
@@ -91,8 +91,8 @@ go1.16
     - "{y1}", "{Y1}": 表示使用 从1开始的**垂直方向**分割顺序数 替换。
     - "{ext}": 表示自动填充生成图像的格式对应的扩展名。
   + 例子: 
-    `-env=D:/workspaces -out=dir/Slice{n1}.png` 
-    `-env=D:/workspaces -out=dir/Slice{y1}_{x1}.{ext}` 
+    - `-env=D:/workspaces -out=dir/Slice{n1}.png` 
+    - `-env=D:/workspaces -out=dir/Slice{y1}_{x1}.{ext}` 
 
 ### <span id="p3.3">例子
 
