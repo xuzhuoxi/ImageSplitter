@@ -15,11 +15,14 @@
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
+go.work
+go.work.sum
+/.idea/
+
 !/demo/ImageSplitter_darwin_amd64
 !/demo/ImageSplitter_linux_amd64
 !/demo/ImageSplitter_win_amd64.exe
 
-/.idea/
 /build/debian
 /build/release
 /demo/tar/

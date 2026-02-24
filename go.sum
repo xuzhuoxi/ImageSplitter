@@ -1,0 +1,4 @@
+github.com/xuzhuoxi/infra-go v1.2.0 h1:em1GH5yeVET9orvOcjwLCN6L5Z6yVBH5N5MZmC+iNIU=
+github.com/xuzhuoxi/infra-go v1.2.0/go.mod h1:MZLa2fjwmnSzZCBTPr2YZ9udrUPM+ACuIHF3a4M2TT4=
+golang.org/x/image v0.0.0-20220413100746-70e8d0d3baa9 h1:LRtI4W37N+KFebI/qV0OFiLUv4GLOWeEW5hn/KEJvxE=
+golang.org/x/image v0.0.0-20220413100746-70e8d0d3baa9/go.mod h1:023OzeP/+EPmXeapQh35lcL3II3LrY8Ic+EFFKVhULM=
