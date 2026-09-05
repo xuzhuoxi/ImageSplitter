@@ -1,9 +1,5 @@
 module github.com/xuzhuoxi/ImageSplitter
 
-go 1.24
+go 1.24.0
 
-toolchain go1.24.13
-
-require (
-	github.com/xuzhuoxi/infra-go v1.2.0
-)
+require github.com/xuzhuoxi/infra-go v1.4.1
