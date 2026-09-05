@@ -25,7 +25,7 @@ type SplitContext struct {
 	OutImagePath string // 【**必要**】输出图片信息，要求使用通配符目录,
 
 	Format      string // 【**非必要**】强制指定图像文件格式, 如果不指定，将使用源图像的格式
-	FormatRatio int    // 【**非必要**】强制指定图像文件质量(如有必要)，如果不指定，使用默认值85
+	FormatRatio int    // 【**非必要**】强制指定图像文件质量(如有必要)，如果不指定，使用默认值80
 
 	FlagSize             Size
 	ImageSize            image.Point

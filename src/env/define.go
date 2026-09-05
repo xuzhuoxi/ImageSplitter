@@ -38,7 +38,7 @@ var (
 )
 
 const (
-	DefaultRatio = 85
+	DefaultRatio = 80
 )
 
 type Size struct {
